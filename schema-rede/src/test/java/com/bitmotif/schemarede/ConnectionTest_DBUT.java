@@ -1,6 +1,7 @@
 package com.bitmotif.schemarede;
 
 import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -17,26 +18,13 @@ public class ConnectionTest_DBUT {
 
    @Test
    public void testConnection() throws Exception {
-
-      try {
-         Class.forName ("oracle.jdbc.driver.OracleDriver");
-      } catch (ClassNotFoundException e) {
-         e.printStackTrace();
-      }
-
-      Connection conn = DriverManager.getConnection
-         ("jdbc:oracle:thin:@localhost:1521:xe", "SYSTEM", "a");
-      // @machineName:port:SID,   userid,  password
-
-
-      // a little test
-      // yet again
-
+      Class.forName ("oracle.jdbc.driver.OracleDriver");
+      Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "SYSTEM", "a");
       Statement stmt = conn.createStatement();
-      ResultSet rset = stmt.executeQuery("select BANNER from SYS.V_$VERSION");
-      while (rset.next())
-         System.out.println ("********** " + rset.getString(1));   // Print col 1
-      stmt.close();
+      ResultSet resultSet = stmt.executeQuery("select 1 from dual");
 
+      while(resultSet.next()) {
+         assertEquals(1, resultSet.getInt(1));
+      }
    }
 }
