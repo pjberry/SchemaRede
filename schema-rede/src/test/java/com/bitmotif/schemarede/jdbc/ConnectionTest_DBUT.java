@@ -1,6 +1,5 @@
-package com.bitmotif.schemarede;
+package com.bitmotif.schemarede.jdbc;
 
-import com.bitmotif.schemarede.jdbc.AbstractDatabaseTestCase;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
