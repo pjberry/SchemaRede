@@ -30,6 +30,7 @@ public class ConnectionTest_DBUT {
 
 
       // a little test
+      // yet again
 
       Statement stmt = conn.createStatement();
       ResultSet rset = stmt.executeQuery("select BANNER from SYS.V_$VERSION");
