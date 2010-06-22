@@ -28,6 +28,9 @@ public class ConnectionTest_DBUT {
          ("jdbc:oracle:thin:@localhost:1521:xe", "SYSTEM", "a");
       // @machineName:port:SID,   userid,  password
 
+
+      // a little test
+
       Statement stmt = conn.createStatement();
       ResultSet rset = stmt.executeQuery("select BANNER from SYS.V_$VERSION");
       while (rset.next())
