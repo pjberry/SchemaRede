@@ -17,7 +17,7 @@ import com.bitmotif.schemarede.jdbc.AbstractDatabaseTestCase;
 public class ColumnFactory_DBUT extends AbstractDatabaseTestCase {
 
    @Test
-   public void testBuildTable() throws Exception {
+   public void testBuildColumn() throws Exception {
       DatabaseMetaData databaseMetaData = conn.getMetaData();
       ResultSet columnResultSet = databaseMetaData.getColumns(null, null, "%", "%");
       columnResultSet.next();
@@ -27,5 +27,6 @@ public class ColumnFactory_DBUT extends AbstractDatabaseTestCase {
       columnResultSet.close();
 
       assertNotNull(column.getName());
+      assertNotNull(column.getTypeName());
    }
 }

@@ -13,6 +13,7 @@ public class ColumnFactoryImpl implements ColumnFactory {
 
    public Column buildColumn(ResultSet columnResultSet) throws SQLException {
       String columnName = columnResultSet.getString("COLUMN_NAME");
-      return new ColumnImpl(columnName);
+      String typeName = columnResultSet.getString("TYPE_NAME");
+      return new ColumnImpl(columnName, typeName);
    }
 }

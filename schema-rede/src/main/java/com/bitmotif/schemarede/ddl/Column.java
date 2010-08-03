@@ -9,4 +9,6 @@ package com.bitmotif.schemarede.ddl;
 public interface Column {
 
    String getName();
+   String getTypeName();
+   
 }

@@ -7,14 +7,20 @@ package com.bitmotif.schemarede.ddl;
  * Time: 7:13:31 PM
  */
 public class ColumnImpl implements Column {
+
    private String columnName;
+   private String typeName;
 
-   public ColumnImpl(String columnName) {
+   public ColumnImpl(String columnName, String typeName) {
       this.columnName = columnName;
+      this.typeName = typeName;
    }
-
 
    public String getName() {
       return columnName;
+   }
+
+   public String getTypeName() {
+      return typeName;
    }
 }

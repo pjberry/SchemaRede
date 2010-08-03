@@ -13,8 +13,15 @@ public class ColumnImpl_UT {
 
    @Test
    public void testGetName() throws Exception {
-      Column column = new ColumnImpl("columnName");
+      Column column = new ColumnImpl("columnName", null);
       
       assertEquals("columnName", column.getName());
+   }
+
+   @Test
+   public void testGetTypeName() throws Exception {
+      Column column = new ColumnImpl(null, "typeName");
+
+      assertEquals("typeName", column.getTypeName());
    }
 }
