@@ -12,7 +12,6 @@ import java.sql.SQLException;
 public class TableFactoryImpl implements TableFactory {
 
    public Table buildTable(ResultSet resultSet) throws SQLException {
-      resultSet.next();
       String tableName = resultSet.getString("TABLE_NAME");
       return new TableImpl(tableName);
    }
