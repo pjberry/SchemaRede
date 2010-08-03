@@ -18,11 +18,12 @@ public class TableFactory_DBUT extends AbstractDatabaseTestCase {
    @Test
    public void testBuildTable() throws Exception {
       DatabaseMetaData databaseMetaData = conn.getMetaData();
-      ResultSet resultSet = databaseMetaData.getTables(null, null, "%", null);
-      resultSet.next();
+      ResultSet tableResultSet = databaseMetaData.getTables(null, null, "%", null);
+      tableResultSet.next();
 
       TableFactory tableFactory = new TableFactoryImpl();
-      Table table = tableFactory.buildTable(resultSet);
+      Table table = tableFactory.buildTable(tableResultSet);
+      tableResultSet.close();
 
       assertNotNull(table.getName());
    }
