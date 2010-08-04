@@ -10,10 +10,12 @@ public class ColumnImpl implements Column {
 
    private String columnName;
    private String typeName;
+   private Integer columnSize;
 
-   public ColumnImpl(String columnName, String typeName) {
+   public ColumnImpl(String columnName, String typeName, Integer columnSize) {
       this.columnName = columnName;
       this.typeName = typeName;
+      this.columnSize = columnSize;
    }
 
    public String getName() {
@@ -23,4 +25,9 @@ public class ColumnImpl implements Column {
    public String getTypeName() {
       return typeName;
    }
+
+   public Integer getSize() {
+      return columnSize;
+   }
+
 }

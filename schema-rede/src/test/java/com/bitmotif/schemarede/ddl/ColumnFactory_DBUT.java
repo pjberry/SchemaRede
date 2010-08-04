@@ -1,12 +1,11 @@
 package com.bitmotif.schemarede.ddl;
 
-import org.junit.Test;
+import com.bitmotif.schemarede.jdbc.AbstractDatabaseTestCase;
 import static org.junit.Assert.assertNotNull;
+import org.junit.Test;
 
 import java.sql.DatabaseMetaData;
 import java.sql.ResultSet;
-
-import com.bitmotif.schemarede.jdbc.AbstractDatabaseTestCase;
 
 /**
  * Created by IntelliJ IDEA.
@@ -28,5 +27,6 @@ public class ColumnFactory_DBUT extends AbstractDatabaseTestCase {
 
       assertNotNull(column.getName());
       assertNotNull(column.getTypeName());
+      assertNotNull(column.getSize());
    }
 }

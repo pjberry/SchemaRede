@@ -10,5 +10,5 @@ public interface Column {
 
    String getName();
    String getTypeName();
-   
+   Integer getSize();
 }
