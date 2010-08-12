@@ -1,0 +1,25 @@
+VARCHAR2(size)
+NVARCHAR2(size)
+CHAR(size)
+NCHAR(size)
+NUMBER(p,s)
+CLOB
+NCLOB
+BLOB
+BFILE
+XMLType
+
+VARCHAR
+PLS_INTEGER
+BINARY_INTEGER 	
+LONG 	
+DATE
+TIMESTAMP (fractional_seconds_precision)
+TIMESTAMP (fractional_seconds_precision) WITH {LOCAL} TIMEZONE
+INTERVAL YEAR (year_precision) TO MONTH
+INTERVAL DAY (day_precision) TO SECOND (fractional_seconds_precision)
+RAW(size) 
+LONG RAW 	
+ROWID
+UROWID
+MLSLABEL
