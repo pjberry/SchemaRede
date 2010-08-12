@@ -15,7 +15,8 @@ public class ColumnFactoryImpl implements ColumnFactory {
       String columnName = columnResultSet.getString("COLUMN_NAME");
       String typeName = columnResultSet.getString("TYPE_NAME");
       Integer columnSize = columnResultSet.getInt("COLUMN_SIZE");
-      
-      return new ColumnImpl(columnName, typeName, columnSize);
+      Integer decimalDigits = columnResultSet.getInt("DECIMAL_DIGITS");
+
+      return new ColumnImpl(columnName, typeName, columnSize, decimalDigits);
    }
 }

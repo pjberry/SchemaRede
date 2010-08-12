@@ -11,11 +11,13 @@ public class ColumnImpl implements Column {
    private String columnName;
    private String typeName;
    private Integer columnSize;
+   private Integer decimalDigits;
 
-   public ColumnImpl(String columnName, String typeName, Integer columnSize) {
+   public ColumnImpl(String columnName, String typeName, Integer columnSize, Integer decimalDigits) {
       this.columnName = columnName;
       this.typeName = typeName;
       this.columnSize = columnSize;
+      this.decimalDigits = decimalDigits;
    }
 
    public String getName() {
@@ -28,6 +30,10 @@ public class ColumnImpl implements Column {
 
    public Integer getSize() {
       return columnSize;
+   }
+
+   public Integer getDecimalDigits() {
+      return decimalDigits;
    }
 
 }

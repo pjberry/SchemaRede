@@ -15,26 +15,34 @@ public class ColumnImpl_UT {
    private static final String COLUMN_NAME = "columnName";
    private static final String TYPE_NAME = "typeName";
    private static final Integer COLUMN_SIZE = 2;
+   private static final Integer DECIMAL_DIGITS = 3;
 
    @Test
    public void testGetName() throws Exception {
-      Column column = new ColumnImpl(COLUMN_NAME, null, 0);
+      Column column = new ColumnImpl(COLUMN_NAME, null, null, null);
       
       assertEquals(COLUMN_NAME, column.getName());
    }
 
    @Test
    public void testGetTypeName() throws Exception {
-      Column column = new ColumnImpl(null, TYPE_NAME, 0);
+      Column column = new ColumnImpl(null, TYPE_NAME, null, null);
 
       assertEquals(TYPE_NAME, column.getTypeName());
    }
 
    @Test
    public void testColumnSize() throws Exception {
-      Column column = new ColumnImpl(null, null, COLUMN_SIZE);
+      Column column = new ColumnImpl(null, null, COLUMN_SIZE, null);
 
       assertEquals(COLUMN_SIZE, column.getSize());
+   }
+
+   @Test
+   public void testDecimalDigits() throws Exception {
+      Column column = new ColumnImpl(null, null, null, DECIMAL_DIGITS);
+
+      assertEquals(DECIMAL_DIGITS, column.getDecimalDigits());
    }
 
 }

@@ -28,5 +28,6 @@ public class ColumnFactory_DBUT extends AbstractDatabaseTestCase {
       assertNotNull(column.getName());
       assertNotNull(column.getTypeName());
       assertNotNull(column.getSize());
+      assertNotNull(column.getDecimalDigits());
    }
 }
