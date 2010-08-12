@@ -35,6 +35,7 @@ public class Sandbox_DBUT extends AbstractDatabaseTestCase {
          System.out.println(column.getName());
          System.out.println(column.getTypeName());
          System.out.println(column.getSize());
+         System.out.println(column.getDecimalDigits());
          System.out.println("");
       }
 

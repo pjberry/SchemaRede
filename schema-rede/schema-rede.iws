@@ -2,12 +2,7 @@
 <project relativePaths="false" version="4">
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/schema-rede.iws" afterPath="$PROJECT_DIR$/schema-rede.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/bitmotif/schemarede/ddl/ColumnImpl_UT.java" afterPath="$PROJECT_DIR$/src/test/java/com/bitmotif/schemarede/ddl/ColumnImpl_UT.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/bitmotif/schemarede/ddl/ColumnFactory_DBUT.java" afterPath="$PROJECT_DIR$/src/test/java/com/bitmotif/schemarede/ddl/ColumnFactory_DBUT.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bitmotif/schemarede/ddl/ColumnFactoryImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/bitmotif/schemarede/ddl/ColumnFactoryImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bitmotif/schemarede/ddl/ColumnImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/bitmotif/schemarede/ddl/ColumnImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bitmotif/schemarede/ddl/Column.java" afterPath="$PROJECT_DIR$/src/main/java/com/bitmotif/schemarede/ddl/Column.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/bitmotif/schemarede/sandbox/Sandbox_DBUT.java" afterPath="$PROJECT_DIR$/src/test/java/com/bitmotif/schemarede/sandbox/Sandbox_DBUT.java" />
     </list>
     <ignored path="schema-rede.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,6 +36,9 @@
       <FILTER>com.bitmotif.schemarede.ddl.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/schema-rede$com_bitmotif_schemarede..es" NAME="com.bitmotif.schemarede Coverage Results" MODIFIED="1281612836863" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="emma" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/schema-rede$Sandbox_DBUT_testBuildATableWithAllTheStuff..es" NAME="Sandbox_DBUT.testBuildATableWithAllTheStuff Coverage Results" MODIFIED="1281613088484" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="emma" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.bitmotif.schemarede.ddl.*</FILTER>
+    </SUITE>
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -90,10 +88,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Sandbox_DBUT.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Sandbox_DBUT.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/bitmotif/schemarede/sandbox/Sandbox_DBUT.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="14" selection-start="557" selection-end="557" vertical-scroll-proportion="0.0">
+            <state line="51" column="0" selection-start="1631" selection-end="1631" vertical-scroll-proportion="0.7540603">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -181,10 +179,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ColumnImpl.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ColumnImpl.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bitmotif/schemarede/ddl/ColumnImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="33" selection-start="300" selection-end="300" vertical-scroll-proportion="0.21818182">
+            <state line="13" column="33" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -435,7 +433,7 @@
       <recent name="com.bitmotif.schemarede.ddl" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.com.bitmotif.schemarede">
+  <component name="RunManager" selected="JUnit.Sandbox_DBUT.testBuildATableWithAllTheStuff">
     <tempConfiguration default="false" name="com.bitmotif.schemarede" type="JUnit" factoryName="JUnit" enabled="true" merge="false" sample_coverage="true" runner="emma">
       <module name="schema-rede" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -639,10 +637,10 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299639" sideWeight="0.6614173" order="3" side_tool="false" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34512636" sideWeight="0.6049869" order="0" side_tool="false" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34512636" sideWeight="0.62729657" order="0" side_tool="false" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38582677" sideWeight="0.5" order="2" side_tool="false" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36351705" sideWeight="0.5" order="2" side_tool="false" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" />
@@ -659,7 +657,7 @@
     <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
     <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="created sandbox and notes" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding in decimalDigits -- thhe number of fractional digits on the size of a column" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
@@ -675,6 +673,7 @@
     <MESSAGE value="adding in column info" />
     <MESSAGE value="adding in column siize" />
     <MESSAGE value="created sandbox and notes" />
+    <MESSAGE value="adding in decimalDigits -- thhe number of fractional digits on the size of a column" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -762,15 +761,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/bitmotif/schemarede/sandbox/Sandbox_DBUT.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="14" selection-start="557" selection-end="557" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitmotif/schemarede/ddl/Column.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="30" selection-start="258" selection-end="258" vertical-scroll-proportion="0.0">
@@ -807,8 +797,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitmotif/schemarede/ddl/ColumnImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="33" selection-start="300" selection-end="300" vertical-scroll-proportion="0.21818182">
+        <state line="13" column="33" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/bitmotif/schemarede/sandbox/Sandbox_DBUT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="0" selection-start="1631" selection-end="1631" vertical-scroll-proportion="0.7540603">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
