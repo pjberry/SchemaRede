@@ -23,12 +23,14 @@ public class ColumnOracleImpl_DBUT extends AbstractDatabaseTestCase {
    public void createTables() throws Exception {
       createTableWithXmlColumn();
       createTableWithClobColumn();
+      createTableWithBlobColumn();
    }
 
    @After
    public void removeTables() throws Exception {
       dropTableWithXmlColumn();
       dropTableWithClobColumn();
+      dropTableWithBlobColumn();
    }
 
    @Test
@@ -69,8 +71,6 @@ public class ColumnOracleImpl_DBUT extends AbstractDatabaseTestCase {
 
    @Test
    public void testBuildBlobColumn() throws Exception {
-      createTableWithBlobColumn();
-
       DatabaseMetaData databaseMetaData = conn.getMetaData();
       ResultSet columnResultSet = databaseMetaData.getColumns(null, null, "MY_BLOB_TABLE", "%");
       columnResultSet.next();
@@ -79,16 +79,12 @@ public class ColumnOracleImpl_DBUT extends AbstractDatabaseTestCase {
       Column column = tableFactory.buildColumn(columnResultSet);
       columnResultSet.close();
 
-      assertNotNull(column.getName());
-      assertNotNull(column.getTypeName());
-      assertNotNull(column.getSize());
+      Column columnOracleImpl = new ColumnOracleImpl(column);
 
-
-      System.out.println(column.getName());
-      System.out.println(column.getTypeName());
-      System.out.println(column.getSize());
-
-      dropTableWithBlobColumn();
+      assertEquals("BLOB_COLUMN", columnOracleImpl.getName());
+      assertEquals("BLOB", columnOracleImpl.getTypeName());
+      assertEquals(4000, columnOracleImpl.getSize().intValue());
+      assertEquals("BLOB_COLUMN BLOB", columnOracleImpl.toString());
    }
 
    @Test
