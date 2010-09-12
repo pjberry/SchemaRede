@@ -41,19 +41,23 @@ public class ColumnOracleImpl implements Column {
       stringBuilder.append( getName() );
       stringBuilder.append( " " );
       stringBuilder.append( getTypeName() );
+      appendSize(stringBuilder);
+      return stringBuilder.toString();
+   }
 
+   private void appendSize(StringBuilder stringBuilder) {
       if(!SIZELESS_TYPES.contains( getTypeName() )) {
          stringBuilder.append( "(" );
          stringBuilder.append( getSize() );
-
-         if(PRECISION_TYPES.contains( getTypeName() )) {
-            stringBuilder.append( ", ");
-            stringBuilder.append( getDecimalDigits() );
-         }
-
-
+         appendPrecision(stringBuilder);
          stringBuilder.append( ")" );
       }
-      return stringBuilder.toString();
+   }
+
+   private void appendPrecision(StringBuilder stringBuilder) {
+      if(PRECISION_TYPES.contains( getTypeName() )) {
+         stringBuilder.append( ", ");
+         stringBuilder.append( getDecimalDigits() );
+      }
    }
 }
