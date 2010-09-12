@@ -9,4 +9,5 @@ package com.bitmotif.schemarede.ddl;
 public interface Table {
 
    String getName();
+   public Column[] getColumns();
 }
