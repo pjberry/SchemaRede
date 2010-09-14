@@ -10,6 +10,15 @@ import java.util.List;
  * Time: 5:56:18 PM
  */
 interface OracleColumnTypes {
-   static final List<String> SIZELESS_TYPES = Arrays.asList("CLOB", "NCLOB", "BLOB", "BFILE", "XMLType");
-   static final List<String> PRECISION_TYPES = Arrays.asList("NUMBER"); 
+
+   String CLOB = "CLOB";
+   String NCLOB = "NCLOB";
+   String BLOB = "BLOB";
+   String BFILE = "BFILE";
+   String XML_TYPE = "XMLType";
+   String NUMBER = "NUMBER";
+
+   List<String> SIZELESS_TYPES = Arrays.asList(CLOB, NCLOB, BLOB, BFILE, XML_TYPE);
+
+   List<String> PRECISION_TYPES = Arrays.asList(NUMBER);
 }

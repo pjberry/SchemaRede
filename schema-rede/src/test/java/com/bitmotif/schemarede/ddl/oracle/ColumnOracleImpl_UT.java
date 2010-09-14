@@ -1,7 +1,6 @@
 package com.bitmotif.schemarede.ddl.oracle;
 
 import com.bitmotif.schemarede.ddl.Column;
-import com.bitmotif.schemarede.ddl.SizelessTypes;
 import com.bitmotif.schemarede.ddl.standard.ColumnStandardImpl;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
@@ -61,7 +60,7 @@ public class ColumnOracleImpl_UT {
 
    @Test
    public void testCLOB_toString() throws Exception {
-      Column column = buildColumn(SizelessTypes.CLOB);
+      Column column = buildColumn(OracleColumnTypes.CLOB);
 
       Column oracleColumn = new ColumnOracleImpl(column);
 
@@ -70,7 +69,7 @@ public class ColumnOracleImpl_UT {
 
    @Test
    public void testNCLOB_toString() throws Exception {
-      Column column = buildColumn(SizelessTypes.NCLOB);
+      Column column = buildColumn(OracleColumnTypes.NCLOB);
 
       Column oracleColumn = new ColumnOracleImpl(column);
 
@@ -79,7 +78,7 @@ public class ColumnOracleImpl_UT {
 
    @Test
    public void testBLOB_toString() throws Exception {
-      Column column = buildColumn(SizelessTypes.BLOB);
+      Column column = buildColumn(OracleColumnTypes.BLOB);
 
       Column oracleColumn = new ColumnOracleImpl(column);
 
@@ -88,7 +87,7 @@ public class ColumnOracleImpl_UT {
 
    @Test
    public void testBFILE_toString() throws Exception {
-      Column column = buildColumn(SizelessTypes.BFILE);
+      Column column = buildColumn(OracleColumnTypes.BFILE);
 
       Column oracleColumn = new ColumnOracleImpl(column);
 
@@ -97,15 +96,11 @@ public class ColumnOracleImpl_UT {
 
    @Test
    public void testXMLType_toString() throws Exception {
-      Column column = buildColumn(SizelessTypes.XMLType);
+      Column column = buildColumn(OracleColumnTypes.XML_TYPE);
 
       Column oracleColumn = new ColumnOracleImpl(column);
 
       assertEquals("columnName XMLType", oracleColumn.toString());
-   }
-
-   private Column buildColumn(SizelessTypes columnType) {
-      return buildColumn( columnType.toString() );
    }
 
    private Column buildColumn(String columnType) {

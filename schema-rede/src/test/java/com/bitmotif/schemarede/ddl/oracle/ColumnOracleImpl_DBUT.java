@@ -106,11 +106,6 @@ public class ColumnOracleImpl_DBUT extends AbstractDatabaseTestCase {
       assertNotNull(column.getTypeName());
       assertNotNull(column.getSize());
 
-
-      System.out.println(column.getName());
-      System.out.println(column.getTypeName());
-      System.out.println(column.getSize());
-
       dropTableWithBfileColumn();
    }
 
