@@ -15,7 +15,7 @@ import java.sql.ResultSet;
  * Date: Aug 3, 2010
  * Time: 8:23:34 AM
  */
-public class ColumnFactory_DBUT extends AbstractDatabaseTestCase {
+public class ColumnFactoryStandardImpl_DBUT extends AbstractDatabaseTestCase {
 
    @Test
    public void testBuildColumn() throws Exception {

@@ -11,7 +11,7 @@ import org.junit.Test;
  * Time: 7:12:05 PM
  */
 
-public class ColumnImpl_UT {
+public class ColumnStandardImpl_UT {
    
    private static final String COLUMN_NAME = "columnName";
    private static final String TYPE_NAME = "typeName";

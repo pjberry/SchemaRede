@@ -12,7 +12,7 @@ import org.junit.Test;
  * Date: Jun 22, 2010
  * Time: 5:41:45 AM
  */
-public class TableImpl_UT {
+public class TableStandardImpl_UT {
 
    private static final String LINE_SEPARATOR = System.getProperty( "line.separator" );
 
@@ -48,10 +48,21 @@ public class TableImpl_UT {
       Table table = new TableStandardImpl("tableName", buildControlColumns());
 
       StringBuilder tableString = new StringBuilder();
-      tableString.append("table").append(" ").append("tableName").append(LINE_SEPARATOR)
-         .append("(").append(LINE_SEPARATOR)
-         .append("columnNameOne").append(" ").append("typeNameOne(-1),").append(LINE_SEPARATOR)
-         .append("columnNameTwo").append(" ").append("NUMBER(-3, -4)").append(LINE_SEPARATOR)
+      tableString
+         .append("table")
+         .append(" ")
+         .append("tableName")
+         .append(LINE_SEPARATOR)
+         .append("(")
+         .append(LINE_SEPARATOR)
+         .append("columnNameOne")
+         .append(" ")
+         .append("typeNameOne(-1),")
+         .append(LINE_SEPARATOR)
+         .append("columnNameTwo")
+         .append(" ")
+         .append("NUMBER(-3, -4)")
+         .append(LINE_SEPARATOR)
          .append(")");
 
      assertEquals(tableString.toString(), table.toString());
