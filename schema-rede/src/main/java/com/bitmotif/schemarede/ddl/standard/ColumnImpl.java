@@ -1,4 +1,6 @@
-package com.bitmotif.schemarede.ddl;
+package com.bitmotif.schemarede.ddl.standard;
+
+import com.bitmotif.schemarede.ddl.Column;
 
 /**
  * Created by IntelliJ IDEA.

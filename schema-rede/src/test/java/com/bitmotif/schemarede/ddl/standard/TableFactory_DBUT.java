@@ -1,5 +1,7 @@
-package com.bitmotif.schemarede.ddl;
+package com.bitmotif.schemarede.ddl.standard;
 
+import com.bitmotif.schemarede.ddl.Table;
+import com.bitmotif.schemarede.ddl.TableFactory;
 import com.bitmotif.schemarede.jdbc.AbstractDatabaseTestCase;
 import static org.junit.Assert.assertNotNull;
 import org.junit.Test;

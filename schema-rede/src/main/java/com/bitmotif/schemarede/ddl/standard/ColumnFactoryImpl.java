@@ -1,4 +1,7 @@
-package com.bitmotif.schemarede.ddl;
+package com.bitmotif.schemarede.ddl.standard;
+
+import com.bitmotif.schemarede.ddl.Column;
+import com.bitmotif.schemarede.ddl.ColumnFactory;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

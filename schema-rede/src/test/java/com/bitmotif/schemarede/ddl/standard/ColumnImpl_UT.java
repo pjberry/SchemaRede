@@ -1,5 +1,6 @@
-package com.bitmotif.schemarede.ddl;
+package com.bitmotif.schemarede.ddl.standard;
 
+import com.bitmotif.schemarede.ddl.Column;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 

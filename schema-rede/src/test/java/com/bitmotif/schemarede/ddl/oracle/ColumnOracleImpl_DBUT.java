@@ -2,7 +2,7 @@ package com.bitmotif.schemarede.ddl.oracle;
 
 import com.bitmotif.schemarede.ddl.Column;
 import com.bitmotif.schemarede.ddl.ColumnFactory;
-import com.bitmotif.schemarede.ddl.ColumnFactoryImpl;
+import com.bitmotif.schemarede.ddl.standard.ColumnFactoryImpl;
 import com.bitmotif.schemarede.jdbc.AbstractDatabaseTestCase;
 import org.junit.After;
 import static org.junit.Assert.assertEquals;
