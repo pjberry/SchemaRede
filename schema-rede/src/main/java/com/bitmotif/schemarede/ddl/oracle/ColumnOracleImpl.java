@@ -1,4 +1,6 @@
-package com.bitmotif.schemarede.ddl;
+package com.bitmotif.schemarede.ddl.oracle;
+
+import com.bitmotif.schemarede.ddl.Column;
 
 import java.util.Arrays;
 import java.util.List;

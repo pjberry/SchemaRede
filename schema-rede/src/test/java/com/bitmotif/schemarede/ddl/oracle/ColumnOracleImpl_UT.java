@@ -1,5 +1,8 @@
-package com.bitmotif.schemarede.ddl;
+package com.bitmotif.schemarede.ddl.oracle;
 
+import com.bitmotif.schemarede.ddl.Column;
+import com.bitmotif.schemarede.ddl.ColumnImpl;
+import com.bitmotif.schemarede.ddl.SizelessTypes;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 

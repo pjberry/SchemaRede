@@ -1,5 +1,6 @@
 package com.bitmotif.schemarede.ddl;
 
+import com.bitmotif.schemarede.ddl.oracle.ColumnOracleImpl;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
