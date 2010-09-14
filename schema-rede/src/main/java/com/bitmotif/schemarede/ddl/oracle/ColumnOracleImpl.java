@@ -2,9 +2,6 @@ package com.bitmotif.schemarede.ddl.oracle;
 
 import com.bitmotif.schemarede.ddl.Column;
 
-import java.util.Arrays;
-import java.util.List;
-
 /**
  * Created by IntelliJ IDEA.
  * User: pjberry
@@ -12,9 +9,6 @@ import java.util.List;
  * Time: 6:27:31 AM
  */
 public class ColumnOracleImpl implements Column {
-
-   private static final List<String> SIZELESS_TYPES = Arrays.asList("CLOB", "NCLOB", "BLOB", "BFILE", "XMLType");
-   private static final List<String> PRECISION_TYPES = Arrays.asList("NUMBER");
 
    private Column column;
 
@@ -48,7 +42,7 @@ public class ColumnOracleImpl implements Column {
    }
 
    private void appendSize(StringBuilder stringBuilder) {
-      if(!SIZELESS_TYPES.contains( getTypeName() )) {
+      if(!OracleColumnTypes.SIZELESS_TYPES.contains( getTypeName() )) {
          stringBuilder.append( "(" );
          stringBuilder.append( getSize() );
          appendPrecision(stringBuilder);
@@ -57,7 +51,7 @@ public class ColumnOracleImpl implements Column {
    }
 
    private void appendPrecision(StringBuilder stringBuilder) {
-      if(PRECISION_TYPES.contains( getTypeName() )) {
+      if(OracleColumnTypes.PRECISION_TYPES.contains( getTypeName() )) {
          stringBuilder.append( ", ");
          stringBuilder.append( getDecimalDigits() );
       }
