@@ -2,7 +2,7 @@ package com.bitmotif.schemarede.ddl.oracle;
 
 import com.bitmotif.schemarede.ddl.Column;
 import com.bitmotif.schemarede.ddl.SizelessTypes;
-import com.bitmotif.schemarede.ddl.standard.ColumnImpl;
+import com.bitmotif.schemarede.ddl.standard.ColumnStandardImpl;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
@@ -109,6 +109,6 @@ public class ColumnOracleImpl_UT {
    }
 
    private Column buildColumn(String columnType) {
-      return new ColumnImpl("columnName", columnType, 1, 1);
+      return new ColumnStandardImpl("columnName", columnType, 1, 1);
    }
 }

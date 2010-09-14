@@ -18,7 +18,7 @@ public class TableImpl_UT {
 
    @Test
    public void testName() throws Exception {
-      Table table = new TableImpl("tableName");
+      Table table = new TableStandardImpl("tableName");
 
       assertEquals("tableName", table.getName());
    }
@@ -27,7 +27,7 @@ public class TableImpl_UT {
    public void testGetColumns() throws Exception {
       Column[] expectedColumns = buildControlColumns();
 
-      Table table = new TableImpl("tableName", expectedColumns);
+      Table table = new TableStandardImpl("tableName", expectedColumns);
 
       Column[] actualColumns = table.getColumns();
       assertEquals(expectedColumns.length, actualColumns.length);
@@ -45,7 +45,7 @@ public class TableImpl_UT {
 
    @Test
    public void testToString() throws Exception {
-      Table table = new TableImpl("tableName", buildControlColumns());
+      Table table = new TableStandardImpl("tableName", buildControlColumns());
 
       StringBuilder tableString = new StringBuilder();
       tableString.append("table").append(" ").append("tableName").append(LINE_SEPARATOR)
@@ -62,6 +62,6 @@ public class TableImpl_UT {
    }
 
    private Column buildColumn(String columnName, String typeName, int columnSize, int decimalDigits) {
-      return new ColumnOracleImpl( new ColumnImpl(columnName, typeName, columnSize, decimalDigits) );
+      return new ColumnOracleImpl( new ColumnStandardImpl(columnName, typeName, columnSize, decimalDigits) );
    }
 }

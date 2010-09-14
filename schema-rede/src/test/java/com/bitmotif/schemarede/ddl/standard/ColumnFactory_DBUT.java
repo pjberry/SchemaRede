@@ -23,7 +23,7 @@ public class ColumnFactory_DBUT extends AbstractDatabaseTestCase {
       ResultSet columnResultSet = databaseMetaData.getColumns(null, null, "%", "%");
       columnResultSet.next();
 
-      ColumnFactory tableFactory = new ColumnFactoryImpl();
+      ColumnFactory tableFactory = new ColumnFactoryStandardImpl();
       Column column = tableFactory.buildColumn(columnResultSet);
       columnResultSet.close();
 

@@ -2,7 +2,7 @@ package com.bitmotif.schemarede.ddl.oracle;
 
 import com.bitmotif.schemarede.ddl.Column;
 import com.bitmotif.schemarede.ddl.ColumnFactory;
-import com.bitmotif.schemarede.ddl.standard.ColumnFactoryImpl;
+import com.bitmotif.schemarede.ddl.standard.ColumnFactoryStandardImpl;
 import com.bitmotif.schemarede.jdbc.AbstractDatabaseTestCase;
 import org.junit.After;
 import static org.junit.Assert.assertEquals;
@@ -42,7 +42,7 @@ public class ColumnOracleImpl_DBUT extends AbstractDatabaseTestCase {
       ResultSet columnResultSet = databaseMetaData.getColumns(null, null, "XML_TABLE", "%");
       columnResultSet.next();
 
-      ColumnFactory tableFactory = new ColumnFactoryImpl();
+      ColumnFactory tableFactory = new ColumnFactoryStandardImpl();
       Column column = tableFactory.buildColumn(columnResultSet);
       columnResultSet.close();
 
@@ -60,7 +60,7 @@ public class ColumnOracleImpl_DBUT extends AbstractDatabaseTestCase {
       ResultSet columnResultSet = databaseMetaData.getColumns(null, null, "MY_CLOB_TABLE", "%");
       columnResultSet.next();
 
-      ColumnFactory tableFactory = new ColumnFactoryImpl();
+      ColumnFactory tableFactory = new ColumnFactoryStandardImpl();
       Column column = tableFactory.buildColumn(columnResultSet);
       columnResultSet.close();
 
@@ -78,7 +78,7 @@ public class ColumnOracleImpl_DBUT extends AbstractDatabaseTestCase {
       ResultSet columnResultSet = databaseMetaData.getColumns(null, null, "MY_BLOB_TABLE", "%");
       columnResultSet.next();
 
-      ColumnFactory tableFactory = new ColumnFactoryImpl();
+      ColumnFactory tableFactory = new ColumnFactoryStandardImpl();
       Column column = tableFactory.buildColumn(columnResultSet);
       columnResultSet.close();
 
@@ -98,7 +98,7 @@ public class ColumnOracleImpl_DBUT extends AbstractDatabaseTestCase {
       ResultSet columnResultSet = databaseMetaData.getColumns(null, null, "MY_BFILE_TABLE", "%");
       columnResultSet.next();
 
-      ColumnFactory tableFactory = new ColumnFactoryImpl();
+      ColumnFactory tableFactory = new ColumnFactoryStandardImpl();
       Column column = tableFactory.buildColumn(columnResultSet);
       columnResultSet.close();
 

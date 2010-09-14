@@ -2,7 +2,7 @@ package com.bitmotif.schemarede.sandbox;
 
 import com.bitmotif.schemarede.ddl.Column;
 import com.bitmotif.schemarede.ddl.ColumnFactory;
-import com.bitmotif.schemarede.ddl.standard.ColumnFactoryImpl;
+import com.bitmotif.schemarede.ddl.standard.ColumnFactoryStandardImpl;
 import com.bitmotif.schemarede.jdbc.AbstractDatabaseTestCase;
 import static org.junit.Assert.assertNotNull;
 import org.junit.Test;
@@ -28,7 +28,7 @@ public class Sandbox_DBUT extends AbstractDatabaseTestCase {
       DatabaseMetaData databaseMetaData = conn.getMetaData();
       ResultSet columnResultSet = databaseMetaData.getColumns(null, null, "TEST_TABLE", "%");
 
-      ColumnFactory columnFactory = new ColumnFactoryImpl();
+      ColumnFactory columnFactory = new ColumnFactoryStandardImpl();
 
       while(columnResultSet.next()) {
          Column column = columnFactory.buildColumn(columnResultSet);
@@ -82,7 +82,7 @@ public class Sandbox_DBUT extends AbstractDatabaseTestCase {
       ResultSet columnResultSet = databaseMetaData.getColumns(null, null, "XML_TABLE", "%");
       columnResultSet.next();
 
-      ColumnFactory tableFactory = new ColumnFactoryImpl();
+      ColumnFactory tableFactory = new ColumnFactoryStandardImpl();
       Column column = tableFactory.buildColumn(columnResultSet);
       columnResultSet.close();
 
@@ -106,7 +106,7 @@ public class Sandbox_DBUT extends AbstractDatabaseTestCase {
       ResultSet columnResultSet = databaseMetaData.getColumns(null, null, "MY_CLOB_TABLE", "%");
       columnResultSet.next();
 
-      ColumnFactory tableFactory = new ColumnFactoryImpl();
+      ColumnFactory tableFactory = new ColumnFactoryStandardImpl();
       Column column = tableFactory.buildColumn(columnResultSet);
       columnResultSet.close();
 
@@ -130,7 +130,7 @@ public class Sandbox_DBUT extends AbstractDatabaseTestCase {
       ResultSet columnResultSet = databaseMetaData.getColumns(null, null, "MY_BLOB_TABLE", "%");
       columnResultSet.next();
 
-      ColumnFactory tableFactory = new ColumnFactoryImpl();
+      ColumnFactory tableFactory = new ColumnFactoryStandardImpl();
       Column column = tableFactory.buildColumn(columnResultSet);
       columnResultSet.close();
 
@@ -154,7 +154,7 @@ public class Sandbox_DBUT extends AbstractDatabaseTestCase {
       ResultSet columnResultSet = databaseMetaData.getColumns(null, null, "MY_BFILE_TABLE", "%");
       columnResultSet.next();
 
-      ColumnFactory tableFactory = new ColumnFactoryImpl();
+      ColumnFactory tableFactory = new ColumnFactoryStandardImpl();
       Column column = tableFactory.buildColumn(columnResultSet);
       columnResultSet.close();
 

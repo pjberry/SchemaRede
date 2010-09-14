@@ -12,7 +12,7 @@ import java.sql.SQLException;
  * Date: Aug 3, 2010
  * Time: 8:29:11 AM
  */
-public class ColumnFactoryImpl implements ColumnFactory {
+public class ColumnFactoryStandardImpl implements ColumnFactory {
 
    public Column buildColumn(ResultSet columnResultSet) throws SQLException {
       String columnName = columnResultSet.getString("COLUMN_NAME");
@@ -20,6 +20,6 @@ public class ColumnFactoryImpl implements ColumnFactory {
       Integer columnSize = columnResultSet.getInt("COLUMN_SIZE");
       Integer decimalDigits = columnResultSet.getInt("DECIMAL_DIGITS");
 
-      return new ColumnImpl(columnName, typeName, columnSize, decimalDigits);
+      return new ColumnStandardImpl(columnName, typeName, columnSize, decimalDigits);
    }
 }

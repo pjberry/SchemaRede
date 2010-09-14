@@ -8,14 +8,14 @@ import com.bitmotif.schemarede.ddl.Column;
  * Date: Aug 2, 2010
  * Time: 7:13:31 PM
  */
-public class ColumnImpl implements Column {
+public class ColumnStandardImpl implements Column {
 
    private String columnName;
    private String typeName;
    private Integer columnSize;
    private Integer decimalDigits;
 
-   public ColumnImpl(String columnName, String typeName, Integer columnSize, Integer decimalDigits) {
+   public ColumnStandardImpl(String columnName, String typeName, Integer columnSize, Integer decimalDigits) {
       this.columnName = columnName;
       this.typeName = typeName;
       this.columnSize = columnSize;

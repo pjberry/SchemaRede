@@ -23,7 +23,7 @@ public class TableFactory_DBUT extends AbstractDatabaseTestCase {
       ResultSet tableResultSet = databaseMetaData.getTables(null, null, "%", null);
       tableResultSet.next();
 
-      TableFactory tableFactory = new TableFactoryImpl();
+      TableFactory tableFactory = new TableFactoryStandardImpl();
       Table table = tableFactory.buildTable(tableResultSet);
       tableResultSet.close();
 

@@ -12,10 +12,10 @@ import java.sql.SQLException;
  * Date: Jun 22, 2010
  * Time: 5:54:41 AM
  */
-public class TableFactoryImpl implements TableFactory {
+public class TableFactoryStandardImpl implements TableFactory {
 
    public Table buildTable(ResultSet resultSet) throws SQLException {
       String tableName = resultSet.getString("TABLE_NAME");
-      return new TableImpl(tableName);
+      return new TableStandardImpl(tableName);
    }
 }

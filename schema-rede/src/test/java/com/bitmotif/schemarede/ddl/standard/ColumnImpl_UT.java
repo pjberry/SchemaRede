@@ -20,28 +20,28 @@ public class ColumnImpl_UT {
 
    @Test
    public void testGetName() throws Exception {
-      Column column = new ColumnImpl(COLUMN_NAME, null, null, null);
+      Column column = new ColumnStandardImpl(COLUMN_NAME, null, null, null);
       
       assertEquals(COLUMN_NAME, column.getName());
    }
 
    @Test
    public void testGetTypeName() throws Exception {
-      Column column = new ColumnImpl(null, TYPE_NAME, null, null);
+      Column column = new ColumnStandardImpl(null, TYPE_NAME, null, null);
 
       assertEquals(TYPE_NAME, column.getTypeName());
    }
 
    @Test
    public void testColumnSize() throws Exception {
-      Column column = new ColumnImpl(null, null, COLUMN_SIZE, null);
+      Column column = new ColumnStandardImpl(null, null, COLUMN_SIZE, null);
 
       assertEquals(COLUMN_SIZE, column.getSize());
    }
 
    @Test
    public void testDecimalDigits() throws Exception {
-      Column column = new ColumnImpl(null, null, null, DECIMAL_DIGITS);
+      Column column = new ColumnStandardImpl(null, null, null, DECIMAL_DIGITS);
 
       assertEquals(DECIMAL_DIGITS, column.getDecimalDigits());
    }

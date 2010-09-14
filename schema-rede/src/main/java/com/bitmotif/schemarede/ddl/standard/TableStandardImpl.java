@@ -9,19 +9,19 @@ import com.bitmotif.schemarede.ddl.Table;
  * Date: Jun 22, 2010
  * Time: 5:42:47 AM
  */
-public class TableImpl implements Table {
+public class TableStandardImpl implements Table {
 
    private static final String LINE_SEPARATOR = System.getProperty( "line.separator" );
 
    private String tableName;
    private Column[] columns;
 
-   public TableImpl(String tableName) {
+   public TableStandardImpl(String tableName) {
       this.tableName = tableName;
       columns = new Column[0];
    }
 
-   public TableImpl(String tableName, Column[] columns) {
+   public TableStandardImpl(String tableName, Column[] columns) {
       this.tableName = tableName;
       this.columns = columns;
    }
