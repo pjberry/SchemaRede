@@ -1,6 +1,6 @@
 package com.bitmotif.schemarede.ddl;
 
-import java.sql.ResultSet;
+import java.sql.DatabaseMetaData;
 import java.sql.SQLException;
 
 /**
@@ -11,5 +11,5 @@ import java.sql.SQLException;
  */
 public interface TableFactory {
 
-   Table buildTable(ResultSet resultSet) throws SQLException;
+   Table buildTable(DatabaseMetaData databaseMetaData, String tableName) throws SQLException;
 }

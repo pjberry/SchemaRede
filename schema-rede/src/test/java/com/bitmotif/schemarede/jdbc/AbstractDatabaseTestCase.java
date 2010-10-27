@@ -18,7 +18,7 @@ public class AbstractDatabaseTestCase {
 
    @Before
    public void createConnection() throws Exception {
-      Class.forName ("oracle.jdbc.driver.OracleDriver");
+      Class.forName("oracle.jdbc.driver.OracleDriver");
       conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "SYSTEM", "a");
    }
 

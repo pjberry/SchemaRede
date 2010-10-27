@@ -23,8 +23,8 @@ public class ColumnFactoryStandardImpl_DBUT extends AbstractDatabaseTestCase {
       ResultSet columnResultSet = databaseMetaData.getColumns(null, null, "%", "%");
       columnResultSet.next();
 
-      ColumnFactory tableFactory = new ColumnFactoryStandardImpl();
-      Column column = tableFactory.buildColumn(columnResultSet);
+      ColumnFactory columnFactory = new ColumnFactoryStandardImpl();
+      Column column = columnFactory.buildColumn(columnResultSet);
       columnResultSet.close();
 
       assertNotNull(column.getName());
