@@ -11,10 +11,16 @@ import com.bitmotif.schemarede.ddl.Table;
  */
 public class SchemaImpl implements Schema {
 
+   private String name;
    private Table[] tables;
 
-   public SchemaImpl(Table[] tables) {
+   public SchemaImpl(String name, Table[] tables) {
+      this.name = name;
       this.tables = tables;
+   }
+
+   public String getName() {
+      return name;
    }
 
    public Table[] getTables() {

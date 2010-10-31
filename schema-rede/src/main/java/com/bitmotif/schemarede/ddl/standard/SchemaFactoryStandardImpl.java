@@ -28,7 +28,7 @@ public class SchemaFactoryStandardImpl implements SchemaFactory {
    public Schema buildSchema(DatabaseMetaData databaseMetaData, String schemaName) throws SQLException {
       ResultSet tableResultSet = databaseMetaData.getTables(null, schemaName, "%", null);
       Table[] tables = buildTables(databaseMetaData, tableResultSet);
-      return new SchemaImpl(tables);
+      return new SchemaImpl(schemaName, tables);
    }
 
    private Table[] buildTables(DatabaseMetaData databaseMetaData, ResultSet tableResultSet) throws SQLException {
