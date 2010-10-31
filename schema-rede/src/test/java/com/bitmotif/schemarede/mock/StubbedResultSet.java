@@ -16,8 +16,20 @@ import java.util.Map;
  */
 public class StubbedResultSet implements ResultSet {
 
+   private Integer numberOfResults = -1;
+   private Integer numberOfResultsReturned = 0;
+
+   public void setNumberOfResults(Integer numberOfResults) {
+      this.numberOfResults = numberOfResults;
+   }
+
    public boolean next() throws SQLException {
-      return false;
+      if (numberOfResultsReturned < numberOfResults ) {
+         numberOfResultsReturned++;
+         return true;
+      } else {
+         return false;
+      }
    }
 
    public void close() throws SQLException {

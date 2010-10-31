@@ -21,6 +21,17 @@ import java.sql.SQLException;
 public class Sandbox_DBUT extends AbstractDatabaseTestCase {
 
    @Test
+   public void testListSchemas() throws Exception {
+      DatabaseMetaData databaseMetaData = conn.getMetaData();
+      ResultSet schemaResultSet = databaseMetaData.getSchemas();
+      while(schemaResultSet.next()) {
+         String schemaName = schemaResultSet.getString("TABLE_SCHEM");
+         System.out.println(schemaName);
+      }
+
+   }
+
+   @Test
    public void testBuildATableWithAllTheStuff() throws Exception {
       createTableWithVariousColumns();
 
@@ -45,17 +56,17 @@ public class Sandbox_DBUT extends AbstractDatabaseTestCase {
    private void createTableWithVariousColumns() throws SQLException {
       String sql =
          "create table TEST_TABLE ( " +
-         "varchar_two_column VARCHAR2(7), " +
-         "nvarchar_two_column NVARCHAR2(8), " +
-         "char_column CHAR(17), " +
-         "nchar_column NCHAR(15), " +
-         "number_column NUMBER(12,3), " +
-         "clob_column CLOB, " +
-         "nclob_column NCLOB, " +
-         "blob_column BLOB, " +
-         "bfile_column BFILE, " +
-         "xml_column XMLType " +
-         ")";
+            "varchar_two_column VARCHAR2(7), " +
+            "nvarchar_two_column NVARCHAR2(8), " +
+            "char_column CHAR(17), " +
+            "nchar_column NCHAR(15), " +
+            "number_column NUMBER(12,3), " +
+            "clob_column CLOB, " +
+            "nclob_column NCLOB, " +
+            "blob_column BLOB, " +
+            "bfile_column BFILE, " +
+            "xml_column XMLType " +
+            ")";
       PreparedStatement statement = conn.prepareStatement(sql);
       statement.execute();
    }

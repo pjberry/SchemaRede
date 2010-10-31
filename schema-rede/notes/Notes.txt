@@ -1,0 +1,5 @@
+StandardImpl -> DefaultImpl?
+    TableDefaultImpl -> DefaultTableImpl?
+    TableDefaultImpl -> DefaultImplTable?
+
+    note that we often say MockTable... -> TableMockImpl
