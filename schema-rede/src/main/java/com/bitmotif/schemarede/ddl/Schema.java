@@ -6,7 +6,8 @@ package com.bitmotif.schemarede.ddl;
  * Date: Oct 30, 2010
  * Time: 8:16:26 AM
  */
-public interface Schema {
+public interface Schema {           
 
+   String getName();
    Table[] getTables();
 }
