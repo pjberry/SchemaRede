@@ -18,7 +18,7 @@ public class TableStandardImpl_UT {
 
    @Test
    public void testName() throws Exception {
-      Table table = new TableStandardImpl("tableName");
+      Table table = new TableStandardImpl("tableName", null);
 
       assertEquals("tableName", table.getName());
    }

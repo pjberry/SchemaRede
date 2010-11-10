@@ -16,11 +16,6 @@ public class TableStandardImpl implements Table {
    private String tableName;
    private Column[] columns;
 
-   public TableStandardImpl(String tableName) {
-      this.tableName = tableName;
-      this.columns = new Column[0];
-   }
-
    public TableStandardImpl(String tableName, Column[] columns) {
       this.tableName = tableName;
       this.columns = columns;
