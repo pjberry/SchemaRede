@@ -2,7 +2,11 @@ package com.bitmotif.schemarede.sandbox;
 
 import com.bitmotif.schemarede.ddl.Column;
 import com.bitmotif.schemarede.ddl.ColumnFactory;
+import com.bitmotif.schemarede.ddl.Schema;
+import com.bitmotif.schemarede.ddl.oracle.ColumnFactoryOracleImpl;
 import com.bitmotif.schemarede.ddl.standard.ColumnFactoryStandardImpl;
+import com.bitmotif.schemarede.ddl.standard.SchemaFactoryStandardImpl;
+import com.bitmotif.schemarede.ddl.standard.TableFactoryStandardImpl;
 import com.bitmotif.schemarede.jdbc.AbstractDatabaseTestCase;
 import static org.junit.Assert.assertNotNull;
 import org.junit.Test;
@@ -29,6 +33,20 @@ public class Sandbox_DBUT extends AbstractDatabaseTestCase {
          System.out.println(schemaName);
       }
 
+   }
+
+   @Test
+   public void testPrintSchemas() throws Exception {
+      createTableWithVariousColumns();
+
+      DatabaseMetaData databaseMetaData = conn.getMetaData();
+
+      SchemaFactoryStandardImpl schemaFactory = new SchemaFactoryStandardImpl(new TableFactoryStandardImpl(new ColumnFactoryOracleImpl(new ColumnFactoryStandardImpl())));
+      Schema schema = schemaFactory.buildSchema(databaseMetaData, "SYSTEM");
+
+      System.out.println(schema.toString());
+
+      dropTableWithVariousColumns();
    }
 
    @Test

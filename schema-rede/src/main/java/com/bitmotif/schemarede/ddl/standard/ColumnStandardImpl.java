@@ -38,4 +38,24 @@ public class ColumnStandardImpl implements Column {
       return decimalDigits;
    }
 
+   public String toString() {
+      StringBuilder stringBuilder = new StringBuilder();
+      stringBuilder.append( getName() );
+      stringBuilder.append( " " );
+      stringBuilder.append( getTypeName() );
+      appendSize(stringBuilder);
+      return stringBuilder.toString();
+   }
+
+   private void appendSize(StringBuilder stringBuilder) {
+      stringBuilder.append( "(" );
+      stringBuilder.append( getSize() );
+      appendPrecision(stringBuilder);
+      stringBuilder.append( ")" );
+   }
+
+   private void appendPrecision(StringBuilder stringBuilder) {
+      stringBuilder.append( ", ");
+      stringBuilder.append( getDecimalDigits() );
+   }
 }
